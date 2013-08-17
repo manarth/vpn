@@ -1,0 +1,19 @@
+
+[global]
+listen-addr = <%= @server_ip %>
+;ipsec saref = yes
+;debug tunnel = yes
+;debug avp = yes
+;debug network = yes
+;debug state = yes
+
+[lns default]
+ip range = 10.254.253.128-10.254.253.250
+local ip = 10.254.253.1
+; assign ip = yes
+refuse pap = yes
+require authentication = yes
+name = OpenswanVPN
+ppp debug = yes
+pppoptfile = /etc/ppp/options.xl2tpd
+length bit = yes
