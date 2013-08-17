@@ -18,17 +18,12 @@ somewhere.
 Secondly, the whole setup isn't that realistic. To do this properly, we should
 really be simulating various network setups:
 
-
- Type          | Description                                                 
- ------------- | ----------------------------------------------------------- 
- public:public | Both VPN server and iDevice have public IPs.                
- public:NAT    | The VPN server has a public IP, but the iDevice is behind a 
-               | NAT router.                                                 
- NAT:public    | The VPN is behind a NAT router (which is forwarding the     
-               | appropriate ports). For example, tunnelling into a home or  
-               | office network. The iDevice has a public IP.                
- NAT:NAT       | Both VPN server and iDevice are behind NAT routers.         
-
+Type          | Description                                                 
+------------- | ----------------------------------------------------------- 
+public:public | Both VPN server and iDevice have public IPs.                
+public:NAT    | The VPN server has a public IP, but the iDevice is behind a NAT router.                                                 
+NAT:public    | The VPN is behind a NAT router (which is forwarding the appropriate ports). For example, tunnelling into a home or office network. The iDevice has a public IP.                
+NAT:NAT       | Both VPN server and iDevice are behind NAT routers.      
 
 We should simulate these scenarios with a second VM that acts as a router.
 
